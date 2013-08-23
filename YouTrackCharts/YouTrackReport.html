@@ -17,12 +17,11 @@
 
            $("#displayReport").click(function() {
                 renderTable();
-           })
+           });
 
            var series = [
-               {Project: "ReSharper",Open: 0, Fixed:0, Duplicate: 0},
-               {Project: "dotCover",Open: 0, Fixed: 0, Duplicate: 0},
-               {Project: "dotTrace",Open: 0, Fixed: 0, Duplicate: 0}
+               {Project: "Everything",Open: 0, Fixed:0, Duplicate: 0},
+               {Project: "DP-1",Open: 0, Fixed: 0, Duplicate: 0}
            ];
 
            function getStatistics() {
@@ -34,7 +33,7 @@
                          if (property != "Project") {
 
                              $.ajaxPoll({
-                                             url: "http://youtrack.jetbrains.net/rest/issue/count?filter=" + encodeURI("project: " + entry.Project + " state: " + property),
+                                             url: "http://asdfq.myjetbrains.com/rest/issue/count?filter=" + encodeURI("project: " + entry.Project + " state: " + property),
                                              dataType: "jsonp",
                                              successCondition: function(result) {
                                                 return result != -1;
