@@ -33,7 +33,7 @@
                          if (property != "Project") {
 
                              $.ajaxPoll({
-                                             url: "http://asdfq.myjetbrains.com/rest/issue/count?filter=" + encodeURI("project: " + entry.Project + " state: " + property),
+                                             url: "http://asdfq.myjetbrains.com/youtrack/rest/issue/count?filter=" + encodeURI("project: " + entry.Project + " state: " + property),
                                              dataType: "jsonp",
                                              successCondition: function(result) {
                                                 return result != -1;
