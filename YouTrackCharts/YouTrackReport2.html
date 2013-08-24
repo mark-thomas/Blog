@@ -39,7 +39,7 @@
                                                 return result != -1;
                                              },
                                              success: function(data, textStatus, xhr) {
-                                                series[index][property] = data;
+                                                series[index][property] = data.value;
                                              }
                               });
                          }
